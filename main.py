@@ -120,8 +120,8 @@ def send_message():
     msg = MIMEMultipart()
     msg.attach(MIMEText(f"Файл Excel содержит {row_amount} {msg_dop}")) # Добавление текста письма
     msg['From'] = send_from # Добавление отправителя
-    # msg['To'] = send_to # Добавление получателей
-    msg['To'] = "inbo-07-21@sumirea.ru" # Добавление получателя(для отладки)
+    msg['To'] = send_to # Добавление получателей
+    # msg['To'] = "inbo-07-21@sumirea.ru" # Добавление получателя(для отладки)
     msg['Date'] = formatdate(localtime=True)
     msg['Subject'] = f"Файл Excel {date_raw}" # Добавление темы
     fp = open(file, 'rb')
