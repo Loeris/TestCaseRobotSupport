@@ -107,7 +107,7 @@ def send_message():
     # Обработка верного склонения для содержимого письма
     if row_amount % 10 == 1:
         msg_dop = "строка"
-    elif row_amount % 10 < 5:
+    elif 1 < row_amount % 10 < 5:
         msg_dop = "строки"
     else:
         msg_dop = "строк"
